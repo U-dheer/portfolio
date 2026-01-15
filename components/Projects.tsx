@@ -149,7 +149,7 @@ const Projects: React.FC = () => {
 
         <div className="relative">
              {/* Connection Line */}
-             <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden md:block"></div>
+             <div className="absolute left-1/2 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden md:block "></div>
              
              {projects.map((project, index) => (
                  <ProjectCard key={project.id} project={project} index={index} />

@@ -4,7 +4,7 @@ import { Mail, Linkedin, Github, Terminal } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="py-32 px-4 text-center relative overflow-hidden">
+    <section id="contact" className="py-10 md:py-30 px-4 text-center relative overflow-hidden">
         {/* Abstract Background for Footer */}
         <div className="absolute inset-0 bg-gradient-to-t from-dark-800 to-transparent z-[-1]" />
         

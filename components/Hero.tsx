@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
 
       // Let's simply update the CSS string directly for the mask
       // Note: "black" in mask-image makes it visible, "transparent" hides it.
-      const newStyle = `radial-gradient(circle 300px at ${e.clientX}px ${e.clientY}px, black 20%, transparent 100%)`;
+      const newStyle = `radial-gradient(circle 600px at ${e.clientX}px ${e.clientY}px, black 20%, transparent 100%)`;
       setMaskStyle(newStyle);
     };
 
@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
         className="absolute inset-0 z-0 pointer-events-none transition-opacity duration-300"
         style={{
           backgroundImage:
-            'url("https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=2000&auto=format&fit=crop")',
+            'url("/images/portf.png")',
           backgroundSize: "cover",
           backgroundPosition: "center",
           opacity: 0.6, // Slightly dimmed even when revealed so text pops
@@ -67,13 +67,13 @@ const Hero: React.FC = () => {
       {/* 3. Decorative Background Elements Parallax */}
       <motion.div
         style={{ y: y1, opacity: 0.2 }}
-        className="absolute left-[10%] top-[20%] text-neon-blue z-0"
+        className="absolute left-[10%] top-[20%] text-neon-blue z-0 md:block hidden"
       >
         <Database size={64} />
       </motion.div>
       <motion.div
         style={{ y: y2, opacity: 0.1 }}
-        className="absolute right-[15%] bottom-[30%] text-neon-purple z-0"
+        className="absolute right-[15%] bottom-[30%] text-neon-purple z-0 md:block hidden"
       >
         <Server size={96} />
       </motion.div>
@@ -84,7 +84,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="inline-block px-4 py-1.5 rounded-full border border-neon-green/30 bg-black/60 backdrop-blur-md"
+          className="inline-block px-4 py-1.5  mt-6 mb-3 md:mt-0 md:mb-0 rounded-full border border-neon-green/30 bg-black/60 backdrop-blur-md"
         >
           <span className="font-mono text-neon-green text-sm">
             System Status: Online
@@ -95,7 +95,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="text-4xl md:text-8xl font-bold tracking-tight mb-8 drop-shadow-2xl "
+          className="text-4xl md:text-8xl font-bold tracking-tight mb-4 drop-shadow-2xl "
         ><span className=" text-4xl font-light"> Designing the</span> <br />
         <span className="text-neon-green">Logic </span> Behind the
        
@@ -108,7 +108,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="text-gray-300 text-sm md:text-xl max-w-2xl mx-auto leading-relaxed drop-shadow-lg"
+          className="text-gray-300  text-sm md:text-xl lg:max-w-2xl max-w-[340px]  mx-auto leading-relaxed drop-shadow-lg"
         >
           Full-Stack Engineer specializing in scalable microservices, AI-driven
           automation, and robust backend architectures. I build the logic that
@@ -119,7 +119,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="mt-12 flex justify-center gap-6"
+          className="mt-8  md:w-auto flex md:flex-row flex-col flex justify-center item-center gap-2 md:gap-6"
         >
           <div className="flex flex-col items-center gap-2 p-4 rounded-lg bg-black/20 backdrop-blur-sm border border-white/5">
             <span className="font-mono text-3xl font-bold text-white">
